@@ -125,7 +125,7 @@ createjs.Ticker.setFPS(60);
 createjs.Touch.disable(canvasStage);
 ```
 
----
+--
 #####HOW TO CREATE / ADD CUSTOM VECTOR SHAPES  
 
 #####STEPS  
@@ -166,7 +166,7 @@ var speechBubbleContainer = speechBubble.draw();
 // Add to stage
 stage.addChild(speechBubbleContainer);
 ```
----
+--
 
 #####DEMO
 
