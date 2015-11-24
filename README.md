@@ -70,10 +70,29 @@ knob.width = 50;
 knob.height = 50;
 knob.backgroundColor = "#FFC84B";
 knob.graphics = "vstickJSKnob";
-
 var knobParent = knob.draw();
 knobParent.regX = 50 / 2;
 knobParent.regY = 50 / 2;
 ```
 
+#####ADD JOYSTICK
+
+```
+// JOYSTICK
+var joystickManager = new VStickJS.Controls.JoyStick(canvasStage);
+joystickManager.joystickPosY = window.innerHeight - 150;
+joystickManager.setCageContainer(arrowsParent);
+joystickManager.setCage(cageParent);
+joystickManager.setKnob(knobParent);
+joystickManager.enableMouseEvent = true;
+joystickManager.draw();
+
+```
+
+```
+// CREATE A PLAYER SHAPE
+var player = new createjs.Shape();
+player.graphics.beginFill("DeepSkyBlue").drawCircle(450, 50, 10);
+canvasStage.addChild(player);
+```
 
