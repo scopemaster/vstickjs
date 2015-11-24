@@ -138,14 +138,33 @@ createjs.Touch.disable(canvasStage);
 
 ```
 // SAMPLE SKIN CODE
-VStickJS.Skins.flowerSkin = function(graphics) {
-    graphics.moveTo(25, 0);
-    graphics.bezierCurveTo(39, 0, 50, 11, 50, 25);
-    graphics.bezierCurveTo(50, 39, 39, 50, 25, 50);
-    graphics.bezierCurveTo(11, 50, 0, 39, 0, 25);
-    graphics.bezierCurveTo(0, 11, 11, 0, 25, 0);
+VStickJS.Skins.speechBubbleSkin = function(graphics) {
+    	graphics.moveTo(262, 60);
+	graphics.bezierCurveTo(282, 20, 185, -17, 163, 23);
+	graphics.bezierCurveTo(149, -11, 61, -4, 69, 30);
+	graphics.bezierCurveTo(40, 8, -14, 45, 9, 85);
+	graphics.bezierCurveTo(-15, 108, 15, 173, 58, 154);
+	graphics.bezierCurveTo(71, 197, 149, 196, 168, 180);
+	graphics.bezierCurveTo(179, 195, 173, 204, 157, 214);
+	graphics.bezierCurveTo(182, 215, 194, 203, 207, 181);
+	graphics.bezierCurveTo(235, 181, 269, 169, 265, 141);
+	graphics.bezierCurveTo(309, 142, 304, 57, 262, 60);
     return graphics;
 }
+
+var speechBubble = new VStickJS.Core.VSComponent();
+speechBubble.actualWidth = 296; // Be sure to set the actual width as the one in your image editor
+speechBubble.actualHeight = 214; // Be sure to set the actual height as the one in your image editor
+speechBubble.width = 50;
+speechBubble.height = 50;
+speechBubble.posX = 300;
+speechBubble.posY = 300;
+speechBubble.backgroundColor = "#FFC84B";
+speechBubble.graphics = "speechBubbleSkin"; // Use skin
+var speechBubbleContainer = speechBubble.draw();
+
+// Add to stage
+stage.addChild(speechBubbleContainer);
 ```
 
 
