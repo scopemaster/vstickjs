@@ -85,7 +85,7 @@ knobParent.regY = 50 / 2;
 ```
 
 #####ADD JOYSTICK  
-Add all created shapes to joystick class
+*Add all created shapes to joystick class*
 
 ```
 // JOYSTICK
@@ -110,6 +110,7 @@ canvasStage.addChild(player);
 // ADD AN UPDATE FUNCTION TO CREATEJS TICKER TO UPDATE PLAYER POSITION
 // CALL JOYSTICK UPDATE FUNCTION
 // CALL STAGE UPDATE FUNCTION
+
 function updateHandler(event) {
 	if (!event.paused) {
 		player.x = joystickManager.moveX;
