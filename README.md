@@ -21,110 +21,127 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 </script>
 ```
 *Create a stage*  
-```
-var canvasStage = new createjs.Stage("vstick-canvas");
+```html
+<script>
+	var canvasStage = new createjs.Stage("vstick-canvas");
+</script>
 ```
 *Create your vector shapes*  
-```
+```html
+<script>
 // ARROWS SHAPE
-var arrowsComp = new VStickJS.Core.VSComponent();
-arrowsComp.actualWidth = 450;
-arrowsComp.actualHeight = 451;
-arrowsComp.width = 140;
-arrowsComp.height = 140;
-arrowsComp.rotation = 0;
-arrowsComp.backgroundColor = "#333";
-arrowsComp.graphics = "vstickJSArrows1";
-var arrowsParent = arrowsComp.draw();
-arrowsParent.regX = 140 / 2;
-arrowsParent.regY = 140 / 2;
+	var arrowsComp = new VStickJS.Core.VSComponent();
+	arrowsComp.actualWidth = 450;
+	arrowsComp.actualHeight = 451;
+	arrowsComp.width = 140;
+	arrowsComp.height = 140;
+	arrowsComp.rotation = 0;
+	arrowsComp.backgroundColor = "#333";
+	arrowsComp.graphics = "vstickJSArrows1";
+	var arrowsParent = arrowsComp.draw();
+	arrowsParent.regX = 140 / 2;
+	arrowsParent.regY = 140 / 2;
+</script>
 ```
 
-```
-// CAGE SHAPE
-var cage = new VStickJS.Core.VSComponent();
-cage.width = 150;
-cage.height = 150;
-cage.backgroundColor = "rgba(0, 0, 0, 0.1)";
-cage.borderWidth = 4;
-cage.borderColor = "rgba(0, 0, 0, 0.1)";
-cage.graphics = "vstickJSCage";
-var cageParent1 = cage.draw();
-cageParent1.regX = 150 / 2;
-cageParent1.regY = 150 / 2;
-```
-
-```
-// CAGE SHAPE
-var cage2 = new VStickJS.Core.VSComponent();
-cage2.width = 100;
-cage2.height = 100;
-cage2.radialGradient = [["#F00","#00F"], [0, 1], [100, 100, 0, 100, 100, 200]];
-cage2.graphics = "vstickJSCage";
-var cageParent2 = cage2.draw();
-cageParent2.regX = 100 / 2;
-cageParent2.regY = 100 / 2;
+```html
+<script>
+	// CAGE SHAPE
+	var cage = new VStickJS.Core.VSComponent();
+	cage.width = 150;
+	cage.height = 150;
+	cage.backgroundColor = "rgba(0, 0, 0, 0.1)";
+	cage.borderWidth = 4;
+	cage.borderColor = "rgba(0, 0, 0, 0.1)";
+	cage.graphics = "vstickJSCage";
+	var cageParent1 = cage.draw();
+	cageParent1.regX = 150 / 2;
+	cageParent1.regY = 150 / 2;
+</script>
 ```
 
-```
-// ADD CAGES TO CONTAINER
-var cageParent = new createjs.Container();
-cageParent.addChild(cageParent1, cageParent2);
+```html
+<script>
+	// CAGE SHAPE
+	var cage2 = new VStickJS.Core.VSComponent();
+	cage2.width = 100;
+	cage2.height = 100;
+	cage2.radialGradient = [["#F00","#00F"], [0, 1], [100, 100, 0, 100, 100, 200]];
+	cage2.graphics = "vstickJSCage";
+	var cageParent2 = cage2.draw();
+	cageParent2.regX = 100 / 2;
+	cageParent2.regY = 100 / 2;
+</script>
 ```
 
+```html
+<script>
+	// ADD CAGES TO CONTAINER
+	var cageParent = new createjs.Container();
+	cageParent.addChild(cageParent1, cageParent2);
+</script>
 ```
+
+```html
+<script>
 // KNOB SHAPE
-var knob = new VStickJS.Core.VSComponent();
-knob.actualWidth = 210;
-knob.actualHeight = 210;
-knob.width = 50;
-knob.height = 50;
-knob.backgroundColor = "#FFC84B";
-knob.graphics = "vstickJSKnob";
-var knobParent = knob.draw();
-knobParent.regX = 50 / 2;
-knobParent.regY = 50 / 2;
+	var knob = new VStickJS.Core.VSComponent();
+	knob.actualWidth = 210;
+	knob.actualHeight = 210;
+	knob.width = 50;
+	knob.height = 50;
+	knob.backgroundColor = "#FFC84B";
+	knob.graphics = "vstickJSKnob";
+	var knobParent = knob.draw();
+	knobParent.regX = 50 / 2;
+	knobParent.regY = 50 / 2;
+</script>
 ```
 
-#####ADD JOYSTICK  
+##### ADD JOYSTICK  
 *Add all created shapes to joystick class*
 
-```
-// JOYSTICK
-var joystickManager = new VStickJS.Controls.JoyStick(canvasStage);
-joystickManager.joystickPosY = window.innerHeight - 150;
-joystickManager.setCageContainer(arrowsParent);
-joystickManager.setCage(cageParent);
-joystickManager.setKnob(knobParent);
-joystickManager.enableMouseEvent = true;
-joystickManager.draw();
-
-```
-
-```
-// CREATE A PLAYER SHAPE
-var player = new createjs.Shape();
-player.graphics.beginFill("DeepSkyBlue").drawCircle(450, 50, 10);
-canvasStage.addChild(player);
+```html
+<script>
+	// JOYSTICK
+	var joystickManager = new VStickJS.Controls.JoyStick(canvasStage);
+	joystickManager.joystickPosY = window.innerHeight - 150;
+	joystickManager.setCageContainer(arrowsParent);
+	joystickManager.setCage(cageParent);
+	joystickManager.setKnob(knobParent);
+	joystickManager.enableMouseEvent = true;
+	joystickManager.draw();
+</script>
 ```
 
+```html
+<script>
+	// CREATE A PLAYER SHAPE
+	var player = new createjs.Shape();
+	player.graphics.beginFill("DeepSkyBlue").drawCircle(450, 50, 10);
+	canvasStage.addChild(player);
+</script>
 ```
-// ADD AN UPDATE FUNCTION TO CREATEJS TICKER TO UPDATE PLAYER POSITION
-// CALL JOYSTICK UPDATE FUNCTION
-// CALL STAGE UPDATE FUNCTION
 
-function updateHandler(event) {
-	if (!event.paused) {
-		player.x = joystickManager.moveX;
-		player.y = joystickManager.moveY;
-		joystickManager.update();
-	  	canvasStage.update();
+```html
+<script>
+	// ADD AN UPDATE FUNCTION TO CREATEJS TICKER TO UPDATE PLAYER POSITION
+	// CALL JOYSTICK UPDATE FUNCTION
+	// CALL STAGE UPDATE FUNCTION
+	
+	function updateHandler(event) {
+		if (!event.paused) {
+			player.x = joystickManager.moveX;
+			player.y = joystickManager.moveY;
+			joystickManager.update();
+		  	canvasStage.update();
+		}
 	}
-}
-
-createjs.Ticker.addEventListener("tick", updateHandler);
-createjs.Ticker.setFPS(60);
-createjs.Touch.disable(canvasStage);
+	
+	createjs.Ticker.addEventListener("tick", updateHandler);
+	createjs.Ticker.setFPS(60);
+	createjs.Touch.disable(canvasStage);
+</script>
 ```
 
 --
@@ -138,35 +155,37 @@ createjs.Touch.disable(canvasStage);
 5. Copy and paste part of the converted canvas code to VStickJS skin.
 6. Finally, use vector shape with VSComponent to create and manipulate the shape however you want.  
 
-```
-// SAMPLE SKIN CODE
-VStickJS.Skins.speechBubbleSkin = function(graphics) {
-    graphics.moveTo(262, 60);
-    graphics.bezierCurveTo(282, 20, 185, -17, 163, 23);
-    graphics.bezierCurveTo(149, -11, 61, -4, 69, 30);
-    graphics.bezierCurveTo(40, 8, -14, 45, 9, 85);
-    graphics.bezierCurveTo(-15, 108, 15, 173, 58, 154);
-    graphics.bezierCurveTo(71, 197, 149, 196, 168, 180);
-    graphics.bezierCurveTo(179, 195, 173, 204, 157, 214);
-    graphics.bezierCurveTo(182, 215, 194, 203, 207, 181);
-    graphics.bezierCurveTo(235, 181, 269, 169, 265, 141);
-    graphics.bezierCurveTo(309, 142, 304, 57, 262, 60);
-    return graphics;
-}
-
-var speechBubble = new VStickJS.Core.VSComponent();
-speechBubble.actualWidth = 296; // Be sure to set the actual width as the one in your image editor
-speechBubble.actualHeight = 214; // Be sure to set the actual height as the one in your image editor
-speechBubble.width = 50;
-speechBubble.height = 50;
-speechBubble.posX = 300;
-speechBubble.posY = 300;
-speechBubble.backgroundColor = "#FFC84B";
-speechBubble.graphics = "speechBubbleSkin"; // Use skin
-var speechBubbleContainer = speechBubble.draw();
-
-// Add to stage
-stage.addChild(speechBubbleContainer);
+```html
+<script>
+	// SAMPLE SKIN CODE
+	VStickJS.Skins.speechBubbleSkin = function(graphics) {
+	    graphics.moveTo(262, 60);
+	    graphics.bezierCurveTo(282, 20, 185, -17, 163, 23);
+	    graphics.bezierCurveTo(149, -11, 61, -4, 69, 30);
+	    graphics.bezierCurveTo(40, 8, -14, 45, 9, 85);
+	    graphics.bezierCurveTo(-15, 108, 15, 173, 58, 154);
+	    graphics.bezierCurveTo(71, 197, 149, 196, 168, 180);
+	    graphics.bezierCurveTo(179, 195, 173, 204, 157, 214);
+	    graphics.bezierCurveTo(182, 215, 194, 203, 207, 181);
+	    graphics.bezierCurveTo(235, 181, 269, 169, 265, 141);
+	    graphics.bezierCurveTo(309, 142, 304, 57, 262, 60);
+	    return graphics;
+	}
+	
+	var speechBubble = new VStickJS.Core.VSComponent();
+	speechBubble.actualWidth = 296; // Be sure to set the actual width as the one in your image editor
+	speechBubble.actualHeight = 214; // Be sure to set the actual height as the one in your image editor
+	speechBubble.width = 50;
+	speechBubble.height = 50;
+	speechBubble.posX = 300;
+	speechBubble.posY = 300;
+	speechBubble.backgroundColor = "#FFC84B";
+	speechBubble.graphics = "speechBubbleSkin"; // Use skin
+	var speechBubbleContainer = speechBubble.draw();
+	
+	// Add to stage
+	stage.addChild(speechBubbleContainer);
+</script>
 ```
 --
 
