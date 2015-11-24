@@ -135,3 +135,18 @@ createjs.Touch.disable(canvasStage);
 5. Copy and paste part of the converted canvas code to VStickJS skin package. (See src.skins.VSComponentSkin.js)  
 6. Finally, use vector shape with VSComponent to create and manipulate the shape however you want.  
 
+```
+// SAMPLE SKIN CODE
+VStickJS.Skins.flowerSkin = function(graphics) {
+    graphics.moveTo(25, 0);
+    graphics.bezierCurveTo(39, 0, 50, 11, 50, 25);
+    graphics.bezierCurveTo(50, 39, 39, 50, 25, 50);
+    graphics.bezierCurveTo(11, 50, 0, 39, 0, 25);
+    graphics.bezierCurveTo(0, 11, 11, 0, 25, 0);
+    return graphics;
+}
+```
+
+
+---
+
