@@ -124,3 +124,14 @@ createjs.Ticker.addEventListener("tick", updateHandler);
 createjs.Ticker.setFPS(60);
 createjs.Touch.disable(canvasStage);
 ```
+
+#####HOW TO CREATE/ADD CUSTOM VECTOR SHAPES  
+
+#####STEPS  
+1. Create a vector shape in an image editor like GIMP or PHOTOSHOP  
+2. Note the width and height of the vector shape. (Ideally 100px x 100px)  
+3. Convert the vector to SVG  
+4. Convert the SVG to HTML5 Canvas  
+5. Copy and paste part of the converted canvas code to VStickJS skin package. (See src.skins.VSComponentSkin.js)  
+6. Finally, use vector shape with VSComponent to create and manipulate the shape however you want.  
+
