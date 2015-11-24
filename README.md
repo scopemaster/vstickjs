@@ -30,7 +30,7 @@ arrowsParent.regY = 140 / 2;
 ```
 
 ```
-// CAGE GRAPHICS
+// CAGE SHAPE
 var cage = new VStickJS.Core.VSComponent();
 cage.width = 150;
 cage.height = 150;
@@ -42,3 +42,38 @@ var cageParent1 = cage.draw();
 cageParent1.regX = 150 / 2;
 cageParent1.regY = 150 / 2;
 ```
+
+```
+// CAGE SHAPE
+var cage2 = new VStickJS.Core.VSComponent();
+cage2.width = 100;
+cage2.height = 100;
+cage2.radialGradient = [["#F00","#00F"], [0, 1], [100, 100, 0, 100, 100, 200]];
+cage2.graphics = "vstickJSCage";
+var cageParent2 = cage2.draw();
+cageParent2.regX = 100 / 2;
+cageParent2.regY = 100 / 2;
+```
+
+```
+// ADD CAGES TO CONTAINER
+var cageParent = new createjs.Container();
+cageParent.addChild(cageParent1, cageParent2);
+```
+
+```
+// KNOB SHAPE
+var knob = new VStickJS.Core.VSComponent();
+knob.actualWidth = 210;
+knob.actualHeight = 210;
+knob.width = 50;
+knob.height = 50;
+knob.backgroundColor = "#FFC84B";
+knob.graphics = "vstickJSKnob";
+
+var knobParent = knob.draw();
+knobParent.regX = 50 / 2;
+knobParent.regY = 50 / 2;
+```
+
+
