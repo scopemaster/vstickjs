@@ -3,7 +3,7 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 
 #####HOW TO CREATE A VIRTUAL JOYSTICK  
 ---
-STEPS  
+#####STEPS  
 1. Create a canvas element  
 2. Create cage shape(s)  
 3. Create knob shape(s)  
@@ -11,7 +11,7 @@ STEPS
 5. Update joytick on every frame  
 6. Update stage on every frame  
 
-
+---
 *Create a canvas element*   
 ```
 var canvas = document.getElementById("vstick-canvas");
