@@ -168,5 +168,5 @@ stage.addChild(speechBubbleContainer);
 ```
 ---
 
-#####Demo
+#####DEMO
 
