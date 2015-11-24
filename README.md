@@ -13,7 +13,7 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 
 --
 *Create a canvas element*   
-```
+```html
 var canvas = document.getElementById("vstick-canvas");
 canvas.setAttribute('width', window.innerWidth);
 canvas.setAttribute('height', window.innerHeight);
