@@ -75,7 +75,8 @@ knobParent.regX = 50 / 2;
 knobParent.regY = 50 / 2;
 ```
 
-#####ADD JOYSTICK
+#####ADD JOYSTICK  
+Add all created shapes to joystick class
 
 ```
 // JOYSTICK
@@ -96,3 +97,18 @@ player.graphics.beginFill("DeepSkyBlue").drawCircle(450, 50, 10);
 canvasStage.addChild(player);
 ```
 
+```
+// ADD AN UPDATE FUNCTION TO CREATEJS TICKER
+function updateHandler(event) {
+	if (!event.paused) {
+		player.x = joystickManager.moveX;
+		player.y = joystickManager.moveY;
+		joystickManager.update();
+	  canvasStage.update();
+	}
+}
+
+createjs.Ticker.addEventListener("tick", updateHandler);
+createjs.Ticker.setFPS(60);
+createjs.Touch.disable(canvasStage);
+```
