@@ -1,7 +1,14 @@
 # vstickjs
 VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and Javascript. It has a UIComponent called (VSComponent) that allows developers to quickly create and manipulate vector graphics with ease to improve workflow and also has a ready made virtual joystick for game developers to integrate into their 2D or 3D games.  The workflow allows developers to easily import and manipulate (with properties) any vector graphics created in their favourite image editor like GIMP or Photoshop.
 
-#####HOW TO CREATE A VIRTUAL JOYSTICK
+#####HOW TO CREATE A VIRTUAL JOYSTICK  
+STEPS  
+1. Create a canvas element
+2. Create cage shape(s)
+3. Create knob shape(s)
+4. Add to joystick
+5. Update joytick on every frame
+6. Update stage on every frame
 
 *Create a canvas element*   
 ```
@@ -13,7 +20,7 @@ canvas.setAttribute('height', window.innerHeight);
 ```
 var canvasStage = new createjs.Stage("vstick-canvas");
 ```
-*Add your vector shapes*  
+*Create your vector shapes*  
 ```
 // ARROWS SHAPE
 var arrowsComp = new VStickJS.Core.VSComponent();
@@ -98,13 +105,15 @@ canvasStage.addChild(player);
 ```
 
 ```
-// ADD AN UPDATE FUNCTION TO CREATEJS TICKER
+// ADD AN UPDATE FUNCTION TO CREATEJS TICKER TO UPDATE PLAYER POSITION
+// CALL JOYSTICK UPDATE FUNCTION
+// CALL STAGE UPDATE FUNCTION
 function updateHandler(event) {
 	if (!event.paused) {
 		player.x = joystickManager.moveX;
 		player.y = joystickManager.moveY;
 		joystickManager.update();
-	  canvasStage.update();
+	  	canvasStage.update();
 	}
 }
 
