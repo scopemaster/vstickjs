@@ -126,7 +126,7 @@ createjs.Touch.disable(canvasStage);
 ```
 
 ---
-#####HOW TO CREATE/ADD CUSTOM VECTOR SHAPES  
+#####HOW TO CREATE / ADD CUSTOM VECTOR SHAPES  
 
 #####STEPS  
 1. Create a vector shape in an image editor like GIMP or PHOTOSHOP  
@@ -166,7 +166,7 @@ var speechBubbleContainer = speechBubble.draw();
 // Add to stage
 stage.addChild(speechBubbleContainer);
 ```
-
-
 ---
+
+#####Demo
 
