@@ -125,6 +125,7 @@ createjs.Ticker.setFPS(60);
 createjs.Touch.disable(canvasStage);
 ```
 
+---
 #####HOW TO CREATE/ADD CUSTOM VECTOR SHAPES  
 
 #####STEPS  
