@@ -139,16 +139,16 @@ createjs.Touch.disable(canvasStage);
 ```
 // SAMPLE SKIN CODE
 VStickJS.Skins.speechBubbleSkin = function(graphics) {
-    	graphics.moveTo(262, 60);
-	graphics.bezierCurveTo(282, 20, 185, -17, 163, 23);
-	graphics.bezierCurveTo(149, -11, 61, -4, 69, 30);
-	graphics.bezierCurveTo(40, 8, -14, 45, 9, 85);
-	graphics.bezierCurveTo(-15, 108, 15, 173, 58, 154);
-	graphics.bezierCurveTo(71, 197, 149, 196, 168, 180);
-	graphics.bezierCurveTo(179, 195, 173, 204, 157, 214);
-	graphics.bezierCurveTo(182, 215, 194, 203, 207, 181);
-	graphics.bezierCurveTo(235, 181, 269, 169, 265, 141);
-	graphics.bezierCurveTo(309, 142, 304, 57, 262, 60);
+    graphics.moveTo(262, 60);
+graphics.bezierCurveTo(282, 20, 185, -17, 163, 23);
+graphics.bezierCurveTo(149, -11, 61, -4, 69, 30);
+graphics.bezierCurveTo(40, 8, -14, 45, 9, 85);
+graphics.bezierCurveTo(-15, 108, 15, 173, 58, 154);
+graphics.bezierCurveTo(71, 197, 149, 196, 168, 180);
+graphics.bezierCurveTo(179, 195, 173, 204, 157, 214);
+graphics.bezierCurveTo(182, 215, 194, 203, 207, 181);
+graphics.bezierCurveTo(235, 181, 269, 169, 265, 141);
+graphics.bezierCurveTo(309, 142, 304, 57, 262, 60);
     return graphics;
 }
 
