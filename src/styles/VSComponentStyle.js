@@ -33,6 +33,10 @@
 
 'use strict';
 
+/**
+ * Object holding global properties for vscomponent
+ * @return {Object}
+ */
 VStickJS.Styles.VSComponent = {
     actualPixelWidth: 50,
     actualPixelHeight: 50,

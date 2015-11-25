@@ -72,12 +72,21 @@ module.exports = function(grunt) {
                     "compilation_level": "WHITESPACE_ONLY"
                 }
             }
+       },
+
+       jsdoc: {
+            dist: {
+                src: ['src/**/*.js', 'src/*.js', 'README.md'],
+                dest: 'doc'
+            }
        }
        
     });
 
     // Tasks
     require('load-grunt-tasks')(grunt);
+
     grunt.registerTask('serve', ['express','watch']);
     grunt.registerTask('build', ['closurecompiler:minify']);
+    grunt.registerTask('doc', ['jsdoc']);
 };

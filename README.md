@@ -1,9 +1,9 @@
 # vstickjs
 VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and Javascript. It has a UIComponent called (VSComponent) that allows developers to quickly create and manipulate vector graphics with ease to improve workflow and also has a ready made virtual joystick for game developers to integrate into their 2D or 3D games.  The workflow allows developers to easily import and manipulate (with properties) any vector graphics created in their favourite image editor like GIMP or Photoshop.
 
-#####HOW TO CREATE A VIRTUAL JOYSTICK  
---
-#####STEPS  
+##### HOW TO CREATE A VIRTUAL JOYSTICK  
+---
+##### STEPS  
 1. Create a canvas element  
 2. Create cage shape(s)  
 3. Create knob shape(s)  
@@ -11,7 +11,7 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 5. Update joytick on every frame  
 6. Update stage on every frame  
 
---
+---
 *Create a canvas element*   
 ```html
 <script>
@@ -144,10 +144,10 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 </script>
 ```
 
---
-#####HOW TO CREATE / ADD CUSTOM VECTOR SHAPES  
+---
+##### HOW TO CREATE / ADD CUSTOM VECTOR SHAPES  
 
-#####STEPS  
+##### STEPS  
 1. Create a vector shape in an image editor like GIMP or PHOTOSHOP  
 2. Note the width and height of the vector shape. (Ideally 300px x 300px)  
 3. Convert the vector to SVG  
@@ -187,7 +187,7 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 	stage.addChild(speechBubbleContainer);
 </script>
 ```
---
+---
 
 #####DEMO
 

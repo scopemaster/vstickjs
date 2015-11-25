@@ -35,7 +35,11 @@
 'use strict';
 
 
-//  CAGE
+/**
+ * Returns custom shape - circle
+ * @return {Graphics}
+ * @see Graphics - CreateJS
+ */
 VStickJS.Skins.vstickJSCage = function(graphics) {
     graphics.moveTo(25, 0);
     graphics.bezierCurveTo(39, 0, 50, 11, 50, 25);
@@ -45,7 +49,11 @@ VStickJS.Skins.vstickJSCage = function(graphics) {
     return graphics;
 }
 
-// KNOB
+/**
+ * Returns custom shape - octagon
+ * @return {Graphics}
+ * @see Graphics - CreateJS
+ */
 VStickJS.Skins.vstickJSKnob = function(graphics) {
     graphics.moveTo(30, 179);
     graphics.lineTo(0, 104);
@@ -59,7 +67,11 @@ VStickJS.Skins.vstickJSKnob = function(graphics) {
     return graphics;
 }
 
-// BUTTON
+/**
+ * Returns custom shape - circle
+ * @return {Graphics}
+ * @see Graphics - CreateJS
+ */
 VStickJS.Skins.vstickJSButton = function(graphics) {
     graphics.moveTo(25, 0);
     graphics.bezierCurveTo(39, 0, 50, 11, 50, 25);
@@ -69,7 +81,11 @@ VStickJS.Skins.vstickJSButton = function(graphics) {
     return graphics;
 }
 
-// JSARROWS1
+/**
+ * Returns custom shape - arrows
+ * @return {Graphics}
+ * @see Graphics - CreateJS
+ */
 VStickJS.Skins.vstickJSArrows1 = function(graphics) {
     graphics.moveTo(226, 1);
     graphics.bezierCurveTo(226, 1, 232, 7, 235, 13);

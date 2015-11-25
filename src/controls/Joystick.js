@@ -45,7 +45,6 @@ VStickJS.Global.JoystickProperty = {
  * @class JoyStick
  * @constructor JoyStick
  * @param {Class} _stage - stage class from CreateJS
- * @see CreateJS - http://www.createjs.com/
  */
 VStickJS.Controls.JoyStick = function(_stage) {
 
@@ -266,7 +265,7 @@ VStickJS.Controls.JoyStick.prototype.setKnob = function(_knob) {
 
 /**
  * Sets a cageContainer property on the joystick
- * @param {[type]} _cage [description]
+ * @param {VSComponent} _cage2
  */
 VStickJS.Controls.JoyStick.prototype.setCageContainer = function(_cage2) {
 	this.cageContainer = _cage2;
@@ -274,7 +273,7 @@ VStickJS.Controls.JoyStick.prototype.setCageContainer = function(_cage2) {
 
 /**
  * Sets a knobContainer property on the joystick
- * @param {[type]} _knob [description]
+ * @param {VSComponent} _knob2
  */
 VStickJS.Controls.JoyStick.prototype.setKnobContainer = function(_knob2) {
 	this.knobContainer = _knob2;

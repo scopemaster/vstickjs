@@ -28,9 +28,8 @@
 
 //##############################################################################
 // VSComponent.js
-// VSComponent class is a class object built on CreateJS to utilize
-// CretaeJS display object to easily build custom vector shapes created
-// in image editor with the help of easey-to-use class properties. 
+// VSComponent class is a class object built on CreateJS to help create and manipulate
+// vector shapes created in an image editor with the help of easey-to-use class properties.
 //##############################################################################
 
 
@@ -40,7 +39,7 @@
  * Creates a new instance of class VSComponent.
  * @class VSComponent
  * @constructor VSComponent
- * @see CreateJS - <a href="http://www.createjs.com/"></a>
+ * @see <a href="http://www.createjs.com/docs/easeljs/classes/DisplayObject.html">CreateJS Doc</a>
  */
 VStickJS.Core.VSComponent = function() {
 
@@ -501,24 +500,24 @@ VStickJS.Core.VSComponent = function() {
 }
 
 /**
- * [getId description]
- * @return {[type]} [description]
+ * Returns a unique number for component
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getId = function() {
     return this.id;
 }
 
 /**
- * [getName description]
- * @return {[type]} [description]
+ * Returns a unique name for component. 
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getName = function() {
     return this.name;
 }
 
 /**
- * [getActualWidth description]
- * @return {[type]} [description]
+ * Returns default width of the component, in pixels if actualWidth is set else returns global actualWidth
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getActualWidth = function() {
     if(this.actualWidth > 0) {
@@ -530,8 +529,8 @@ VStickJS.Core.VSComponent.prototype.getActualWidth = function() {
 }
 
 /**
- * [getActualHeight description]
- * @return {[type]} [description]
+ * Returns default height of the component, in pixels if actualHeight is set else returns global actualHeight
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getActualHeight = function() {
     if(this.actualHeight > 0) {
@@ -543,8 +542,8 @@ VStickJS.Core.VSComponent.prototype.getActualHeight = function() {
 }
 
 /**
- * [getXScale description]
- * @return {[type]} [description]
+ * Returns component's horizontal scale based on width and actualWidth values
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getScaleX = function() {
 	if(this.scaleX > 0) {
@@ -566,8 +565,8 @@ VStickJS.Core.VSComponent.prototype.getScaleX = function() {
 }
 
 /**
- * [getYScale description]
- * @return {[type]} [description]
+ * Returns component's vertical scale based on height and actualHeight values
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getScaleY = function() {
 	if(this.scaleY > 0) {
@@ -589,8 +588,8 @@ VStickJS.Core.VSComponent.prototype.getScaleY = function() {
 }
 
 /**
- * [getWidth Calculate width or fallback back on actual width if width value is not defined]
- * @return {[Number]} [description]
+ * Returns component's width by horizontal scale factor
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getWidth = function() {
     if(this.width > 0) {
@@ -612,8 +611,8 @@ VStickJS.Core.VSComponent.prototype.getWidth = function() {
 }
 
 /**
- * [getHeight Calculate height or fallback back on actual height if height value is not defined]
- * @return {[type]} [description]
+ * Returns component's height by vertical scale factor
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getHeight = function() {
     if(this.height > 0) {
@@ -635,24 +634,24 @@ VStickJS.Core.VSComponent.prototype.getHeight = function() {
 }
 
 /**
- * [getPosX description]
- * @return {[type]} [description]
+ * Returns component's horizontal position
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getPosX = function() {
     return this.posX;
 }
 
 /**
- * [getYPos description]
- * @return {[type]} [description]
+ * Returns component's vertical position
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getPosY = function() {
     return this.posY;
 }
 
 /**
- * [getFillColor description]
- * @return {[type]} [description]
+ * Returns component's background color if backgroundColor is set else returns global backgroundColor
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getFillColor = function() {
     if(this.backgroundColor !== "") {
@@ -664,29 +663,16 @@ VStickJS.Core.VSComponent.prototype.getFillColor = function() {
 }
 
 /**
- * [getShadowBlur description]
- * @return {[type]} [description]
- 
-VStickJS.Core.VSComponent.prototype.getShadowBlur = function()  {
-    if(this.shadowblur !== null && $scope.shadowblur !== undefined && $scope.shadowblur !== "") {
-        return Number($scope.shadowblur);
-    }
-    else {
-        return OnixTheme.shadowblur;
-    }
-}*/
-
-/**
- * [getText description]
- * @return {[type]} [description]
+ * Returns component's text
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getText = function() {
     return this.text;
 }
 
 /**
- * [getColor description]
- * @return {[type]} [description]
+ * Returns component's text color if color is set else returns global color
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getColor = function() {
     if(this.color !== "") {
@@ -698,8 +684,8 @@ VStickJS.Core.VSComponent.prototype.getColor = function() {
 }
 
 /**
- * [getFontSize description]
- * @return {[type]} [description]
+ * Returns component's font size if fontSize is set else returns global fontSize
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getFontSize = function() {
     if(this.fontSize !== "") {
@@ -711,8 +697,8 @@ VStickJS.Core.VSComponent.prototype.getFontSize = function() {
 }
 
 /**
- * [getFontFamily description]
- * @return {[type]} [description]
+ * Returns component's font size if fontSize is set else returns global fontSize
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getFontFamily = function() {
     if(this.fontFamily !== "") {
@@ -724,8 +710,8 @@ VStickJS.Core.VSComponent.prototype.getFontFamily = function() {
 }
 
 /**
- * [getRegX description]
- * @return {[type]} [description]
+ * Returns component's horizontal registration point or determines and returns a new value if regX is set to "center"
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getRegX = function() {
     if(this.regX === "center") {
@@ -737,8 +723,8 @@ VStickJS.Core.VSComponent.prototype.getRegX = function() {
 }
 
 /**
- * [getRegY description]
- * @return {[type]} [description]
+ * Returns component's vertical registration point or determines and returns a new value if regY is set to "center"
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getRegY = function() {
     if(this.regY === "center") {
@@ -750,16 +736,16 @@ VStickJS.Core.VSComponent.prototype.getRegY = function() {
 }
 
 /**
- * [getTextStrokeWidth description]
- * @return {[type]} [description]
+ * Returns thickness of component's text stroke
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getTextStrokeWidth = function() {
 	return this.textStrokeWidth;
 }
 
 /**
- * [getTextStrokeColor description]
- * @return {[type]} [description]
+ * Returns component's text stroke color if textStrokeColor is set else returns global component textStrokeColor
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getTextStrokeColor = function() {
     if(this.textStrokeColor !== "") {
@@ -771,8 +757,8 @@ VStickJS.Core.VSComponent.prototype.getTextStrokeColor = function() {
 }
 
 /**
- * [getBorderColor description]
- * @return {[type]} [description]
+ * Returns component's border color if borderColor is set else returns component global borderColor
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getBorderColor = function() {
     if(this.borderColor !== "") {
@@ -784,16 +770,16 @@ VStickJS.Core.VSComponent.prototype.getBorderColor = function() {
 }
 
 /**
- * [getDisplayShadow description]
- * @return {[type]} [description]
+ * Returns component's dropshadow state if true of false
+ * @return {Boolean}
  */
 VStickJS.Core.VSComponent.prototype.getDisplayShadow = function() {
 	return this.displayShadow;
 }
 
 /**
- * [prototypegetShadowColor description]
- * @return {[type]} [description]
+ * Returns component's dropshadow color if shadowColor is set else returns component global shadowColor
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getShadowColor = function() {
     if(this.shadowColor !== "") {
@@ -805,24 +791,24 @@ VStickJS.Core.VSComponent.prototype.getShadowColor = function() {
 }
 
 /**
- * [getShadowPosX description]
- * @return {[type]} [description]
+ * Returns component's dropshadow horizontal position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getShadowPosX = function() {
     return this.shadowPosX;
 }
 
 /**
- * [getShadowPosY description]
- * @return {[type]} [description]
+ * Returns component's dropshadow vertical position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getShadowPosY = function() {
     return this.shadowPosY;
 }
 
 /**
- * [getShadowBlur description]
- * @return {[type]} [description]
+ * Returns component's dropshadow blur value if shadowBlur is set else returns component global shadowBlur
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getShadowBlur = function() {
     if(this.shadowBlur !== "") {
@@ -834,40 +820,40 @@ VStickJS.Core.VSComponent.prototype.getShadowBlur = function() {
 }
 
 /**
- * [getRotation description]
- * @return {[type]} [description]
+ * Returns component's rotation  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getRotation = function() {
     return this.rotation;
 }
 
 /**
- * [getXskew description]
- * @return {[type]} [description]
+ * Returns component's horizontal skew  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getSkewX = function() {
     return this.skewX;
 }
 
 /**
- * [getSkewY description]
- * @return {[type]} [description]
+ * Returns component's vertical skew  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getSkewY = function() {
     return this.skewY;
 }
 
 /**
- * [getDisplayTextShadow description]
- * @return {[type]} [description]
+ * Returns component's text dropshadow state if true of false
+ * @return {Boolean}
  */
 VStickJS.Core.VSComponent.prototype.getDisplayTextShadow = function() {
     return this.displayTextShadow;
 }
 
 /**
- * [getTextShadowColor description]
- * @return {[type]} [description]
+ * Returns component's text dropshadow color if textShadowColor is set else returns component global textShadowColor
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getTextShadowColor = function() {
     if(this.textShadowColor !== "") {
@@ -879,24 +865,24 @@ VStickJS.Core.VSComponent.prototype.getTextShadowColor = function() {
 }
 
 /**
- * [getTextShadowXpos description]
- * @return {[type]} [description]
+ * Returns component's text dropshadow horizontal position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getTextShadowPosX = function() {
     return this.textShadowPosX;
 }
 
 /**
- * [getTextShadowYpos description]
- * @return {[type]} [description]
+ * Returns component's text dropshadow vertical position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getTextShadowPosY = function() {
     return this.textShadowPosY;
 }
 
 /**
- * [getTextShadowBlur description]
- * @return {[type]} [description]
+ * Returns component's text dropshadow blur value if textShadowBlur is set else returns component global textShadowBlur
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getTextShadowBlur = function() {
     if(this.textShadowBlur !== "") {
@@ -908,16 +894,16 @@ VStickJS.Core.VSComponent.prototype.getTextShadowBlur = function() {
 }
 
 /**
- * [getDisplayBorderShadow description]
- * @return {[type]} [description]
+ * Returns component's border dropshadow state if true of false
+ * @return {Boolean}
  */
 VStickJS.Core.VSComponent.prototype.getDisplayBorderShadow = function() {
     return this.displayBorderShadow;
 }
 
 /**
- * [getBorderShadowColor description]
- * @return {[type]} [description]
+ * Returns component's border dropshadow color if borderShadowColor is set else returns component global borderShadowColor
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getBorderShadowColor = function() {
     if(this.borderShadowColor !== "") {
@@ -929,24 +915,24 @@ VStickJS.Core.VSComponent.prototype.getBorderShadowColor = function() {
 }
 
 /**
- * [getBorderShadowXpos description]
- * @return {[type]} [description]
+ * Returns component's border dropshadow horizontal position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderShadowPosX = function() {
     return this.borderShadowPosX;
 }
 
 /**
- * [getBorderShadowYpos description]
- * @return {[type]} [description]
+ * Returns component's border dropshadow vertical position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderShadowPosY = function() {
     return this.borderShadowPosY;
 }
 
 /**
- * [getBorderShadowBlur description]
- * @return {[type]} [description]
+ * Returns component's border dropshadow blur value if borderShadowBlur is set else returns component global borderShadowBlur
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderShadowBlur = function() {
     if(this.borderShadowBlur !== "") {
@@ -958,8 +944,8 @@ VStickJS.Core.VSComponent.prototype.getBorderShadowBlur = function() {
 }
 
 /**
- * [getPixelBorder description]
- * @return {[type]} [description]
+ * Calculate and returns component's border thickness  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getPixelBorder = function() {
     if(this.borderWidth > 0) {
@@ -971,8 +957,8 @@ VStickJS.Core.VSComponent.prototype.getPixelBorder = function() {
 }
 
 /**
- * [getBorderWidth description]
- * @return {[type]} [description]
+ * Calculate and returns component's border width
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderWidth = function() {
     var borderVal = this.getPixelBorder();
@@ -1000,8 +986,8 @@ VStickJS.Core.VSComponent.prototype.getBorderWidth = function() {
 }
 
 /**
- * [getBorderHeight description]
- * @return {[type]} [description]
+ * Calculate and returns component's border height  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderHeight = function() {
     var borderVal = this.getPixelBorder();
@@ -1029,8 +1015,8 @@ VStickJS.Core.VSComponent.prototype.getBorderHeight = function() {
 }
 
 /**
- * [getBorderXScale description]
- * @return {[type]} [description]
+ * Calculate and returns component's border horizontal position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderScaleX = function() {
     var borderVal = this.getPixelBorder();
@@ -1058,8 +1044,8 @@ VStickJS.Core.VSComponent.prototype.getBorderScaleX = function() {
 }
 
 /**
- * [getBorderYScale description]
- * @return {[type]} [description]
+ * Calculate and returns component's border vertical position  
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getBorderScaleY = function() {
     var borderVal = this.getPixelBorder();
@@ -1087,72 +1073,74 @@ VStickJS.Core.VSComponent.prototype.getBorderScaleY = function() {
 }
 
 /**
- * [getLinearGradient description]
- * @return {[type]} [description]
+ * Returns component's linear gradient
+ * @return {Array}
  */
 VStickJS.Core.VSComponent.prototype.getLinearGradient = function() {
     return this.linearGradient;
 }
 
 /**
- * [getRadialGradient description]
- * @return {[type]} [description]
+ * Returns component's radial gradient
+ * @return {Array}
  */
 VStickJS.Core.VSComponent.prototype.getRadialGradient = function() {
     return this.radialGradient;
 }
 
 /**
- * [getTextPosX description]
- * @return {[type]} [description]
+ * Returns component's text horizontal position
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getTextPosX = function() {
     return this.textPosX;
 }
 
 /**
- * [getTextPosY description]
- * @return {[type]} [description]
+ * Returns component's text vertical position
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getTextPosY = function() {
     return this.textPosY;
 }
 
 /**
- * [getTextAlign takes either "" or "center"]
- * @return {[type]} [description]
+ * Returns component's text alignment. 
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getTextAlign = function() {
     return this.textAlign;
 }
 
 /**
- * [getFilters description]
- * @return {[type]} [description]
+ * Returns component's filters. 
+ * @return {Array}
+ * @example new createjs.ColorFilter(0, 0, 0, 1, 0, 0, 255, 0)
+ * @see CreateJS
  */
 VStickJS.Core.VSComponent.prototype.getFilters = function() {
     return this.filters;
 }
 
 /**
- * [getStrokeStyle description]
- * @return {[type]} [description]
+ * Returns component's stroke style array values. 
+ * @return {Array}
  */
 VStickJS.Core.VSComponent.prototype.getStrokeStyle = function() {
     return this.strokeStyle;
 }
 
 /**
- * [getStrokeDash description]
- * @return {[type]} [description]
+ * Returns component's stroke dash array values. 
+ * @return {Array}
  */
 VStickJS.Core.VSComponent.prototype.getStrokeDash = function() {
 	return this.strokeDash;
 }
 
 /**
- * [getStrokeColor description]
- * @return {[type]} [description]
+ * Returns component's stroke color if strokeColor is set else returns component global strokeColor. 
+ * @return {String}
  */
 VStickJS.Core.VSComponent.prototype.getStrokeColor = function() {
     if(this.strokeColor !== "") {
@@ -1164,16 +1152,16 @@ VStickJS.Core.VSComponent.prototype.getStrokeColor = function() {
 }
 
 /**
- * [getAlpha description]
- * @return {[type]} [description]
+ * Returns component's alpha value. 
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getAlpha = function() {
     return this.alpha;
 }
 
 /**
- * [getImage description]
- * @return {[type]} [description]
+ * Returns component's image display object if image is set else return null. 
+ * @return {DisplayObject}
  */
 VStickJS.Core.VSComponent.prototype.getImage = function() {
     if(this.image !== "") {
@@ -1185,8 +1173,8 @@ VStickJS.Core.VSComponent.prototype.getImage = function() {
 }
 
 /**
- * [getImageScaleX description]
- * @return {[type]} [description]
+ * Returns component's image horizontal scale factor. 
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getImageScaleX = function(imgWidth) {
     if(this.scaleX > 0) {
@@ -1208,8 +1196,8 @@ VStickJS.Core.VSComponent.prototype.getImageScaleX = function(imgWidth) {
 }
 
 /**
- * [getImageScaleX description]
- * @return {[type]} [description]
+ * Returns component's image vertical scale factor. 
+ * @return {Number}
  */
 VStickJS.Core.VSComponent.prototype.getImageScaleY = function(imgHeight) {
     if(this.scaleY > 0) {
@@ -1231,9 +1219,8 @@ VStickJS.Core.VSComponent.prototype.getImageScaleY = function(imgHeight) {
 }
 
 /**
- * [getGraphics description]
- * @param  {[type]} graphics [description]
- * @return {[type]}          [description]
+ * Compute and returns specified graphics to be rendered inside component, in pixels.
+ * @return {Function}
  */
 VStickJS.Core.VSComponent.prototype.getGraphics = function(graphics) {
     if(this.graphics !== "") {
@@ -1242,8 +1229,9 @@ VStickJS.Core.VSComponent.prototype.getGraphics = function(graphics) {
 }
 
 /**
- * [getBorderShape description]
- * @return {[type]} [description]
+ * Calculate and returns component's border shape. 
+ * @return {Shape}
+ * @see Shape - CreateJS
  */
 VStickJS.Core.VSComponent.prototype.getBorderShape = function() {
     var borderShape = new createjs.Shape();
@@ -1268,8 +1256,9 @@ VStickJS.Core.VSComponent.prototype.getBorderShape = function() {
 }
 
 /**
- * [initComponent description]
- * @return {[type]} [description]
+ * Uses all defined properties value to determine the final look of the component. 
+ * @return {Container}
+ * @see Container - CreateJS
  */
 VStickJS.Core.VSComponent.prototype.draw = function() {
 
@@ -1324,7 +1313,6 @@ VStickJS.Core.VSComponent.prototype.draw = function() {
     }
 
     // Add Filters
-    // Example: new createjs.ColorFilter(0, 0, 0, 1, 0, 0, 255, 0)
     if(this.getFilters().length > 0) {
         shape.filters = this.getFilters();
     }
