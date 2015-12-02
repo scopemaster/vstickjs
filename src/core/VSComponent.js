@@ -1329,7 +1329,8 @@ VStickJS.Core.VSComponent.prototype.draw = function() {
     }
 
     function imageLoadHandler() {
-        bitmap = new createjs.Bitmap(img);
+        var imgObj = event.target;
+        bitmap = new createjs.Bitmap(imgObj);
         
         bitmap.rotation = classObj.getRotation();
         bitmap.skewX = classObj.getSkewX();

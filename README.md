@@ -144,6 +144,17 @@ VStickJS is simple graphics library built on top of CreateJS with HTML5, CSS and
 </script>
 ```
 
+*Joystick control properties*
+```html
+<script>
+	joystickManager.moveX // returns x position value on screen relative to joystick-knob x position.
+	joystickManager.moveY // returns y position value on screen relative to joystick-knob y position.
+	joystickManager.angle // returns joystick-knob rotation angle value.
+	joystickManager.horizontal // returns value between 1 and -1 when joystick-knob moves horizontally.
+	joystickManager.vertical // returns value between 1 and -1 when joystick-knob moves vertically.
+</script>
+```  
+
 ---
 ##### HOW TO CREATE / ADD CUSTOM VECTOR SHAPES  
 
