@@ -32,8 +32,6 @@
 //##############################################################################
 
 
-'use strict';
-
 // Global Properties
 VStickJS.Global.JoystickProperty = {
 	isDragging: false,
@@ -42,9 +40,10 @@ VStickJS.Global.JoystickProperty = {
 
 /**
  * Creates a new instance of class JoyStick
- * @class JoyStick
- * @constructor JoyStick
+ * @constructor
+ * @class VStickJS/Controls/JoyStick
  * @param {Class} _stage - stage class from CreateJS
+ * @see <a href="http://www.createjs.com/docs/easeljs/classes/Stage.html">CreateJS Stage</a>
  */
 VStickJS.Controls.JoyStick = function(_stage) {
 
@@ -191,7 +190,6 @@ VStickJS.Controls.JoyStick = function(_stage) {
 	 * @property angle
 	 * @type {Number}
 	 * @default 0
-	 * @see {joystick}
 	 * @readonly
 	 */
 	this.angle = 0;
@@ -326,6 +324,7 @@ VStickJS.Controls.JoyStick.prototype.draw = function() {
 
 /**
  * Sets isDragging property to true if mouse down on joystick
+ * @private
  * @see CreateJS - MouseEvents
  */
 VStickJS.Controls.JoyStick.prototype.mouseDownHandler = function() {
@@ -334,6 +333,7 @@ VStickJS.Controls.JoyStick.prototype.mouseDownHandler = function() {
 
 /**
  * Sets isDragging property to false if press up on joystick
+ * @private
  * @see CreateJS - MouseEvents
  */
 VStickJS.Controls.JoyStick.prototype.pressUpHandler = function() {
@@ -342,6 +342,7 @@ VStickJS.Controls.JoyStick.prototype.pressUpHandler = function() {
 
 /**
  * Sets joyStickMouseX property on joystick to the value of event.localX value
+ * @private
  * @param  {Object} evt
  * @see CreateJS - MouseEvents
  */

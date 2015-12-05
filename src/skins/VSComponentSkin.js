@@ -32,8 +32,6 @@
 // See doc on how to use these functions
 //##############################################################################
 
-'use strict';
-
 
 /**
  * Returns custom shape - circle

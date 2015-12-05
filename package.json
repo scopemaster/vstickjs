@@ -19,6 +19,7 @@
     "grunt-contrib-htmlmin": "0.4.0",
     "grunt-express-server": "~0.4.17",
     "grunt-express": "^1.4.1",
-    "grunt-jsdoc": "1.0.0"
+    "grunt-jsdoc": "1.0.0",
+    "ink-docstrap": "latest"
   }
 }
