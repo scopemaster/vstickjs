@@ -63,7 +63,18 @@ module.exports = function(grunt) {
             }
         },
 
-       closurecompiler: {
+        uglify: {
+            production: {
+                options: {
+                    mangle: false
+                },
+                files: {
+                    'build/vstickjs.min.js': ['src/VStickJS.js','src/styles/*.js','src/skins/*.js','src/core/*.js','src/controls/*.js']
+                }
+            }
+        },
+
+        closurecompiler: {
             minify: {
                 files: {
                     "build/vstickjs.min.js": ['src/VStickJS.js','src/styles/*.js','src/skins/*.js','src/core/*.js','src/controls/*.js']
@@ -72,9 +83,9 @@ module.exports = function(grunt) {
                     "compilation_level": "WHITESPACE_ONLY"
                 }
             }
-       },
+        },
 
-       jsdoc: {
+        jsdoc: {
             dist: {
                 src: ['src/**/*.js', 'src/*.js', 'README.md'],
                 options: {
@@ -83,7 +94,7 @@ module.exports = function(grunt) {
                     configure: './node_modules/grunt-jsdoc/node_modules/jsdoc/conf.json'
                 }
             }
-       }
+        }
        
     });
 
@@ -91,6 +102,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.registerTask('serve', ['express','watch']);
-    grunt.registerTask('build', ['closurecompiler:minify']);
+    grunt.registerTask('build', ['uglify:production']);
+    grunt.registerTask('build2', ['closurecompiler:minify']);
     grunt.registerTask('doc', ['jsdoc']);
 };
